@@ -1,0 +1,224 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0f0f3f, #1a1a4f, #2a2a6f);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Glass card styles */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.47);
+}
+
+/* Text styles */
+.neon-text {
+    color: #fff;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Button styles */
+.neon-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.neon-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.neon-button-primary {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+}
+
+.neon-button-primary:hover {
+    background: rgba(138, 43, 226, 0.2);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+    color: #fff;
+}
+
+.neon-button-secondary {
+    box-shadow: 0 0 15px rgba(32, 156, 238, 0.4);
+}
+
+.neon-button-secondary:hover {
+    background: rgba(32, 156, 238, 0.2);
+    box-shadow: 0 0 25px rgba(32, 156, 238, 0.6);
+    color: #fff;
+}
+
+/* Input styles */
+.glass-input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) !important;
+    outline: none;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Navbar styles */
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation links */
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    text-shadow: 
+        0 0 10px rgba(32, 156, 238, 0.6),
+        0 0 20px rgba(32, 156, 238, 0.4);
+}
+
+.nav-link.active {
+    color: #fff !important;
+    text-shadow: 
+        0 0 10px rgba(32, 156, 238, 0.8),
+        0 0 20px rgba(32, 156, 238, 0.6),
+        0 0 30px rgba(32, 156, 238, 0.4);
+}
+
+/* Table styles - Enhanced and fixed */
+.glass-card .table {
+    --bs-table-bg: transparent !important;
+    --bs-table-color: #fff !important;
+    margin-bottom: 0;
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-card .table thead {
+    background: rgba(15, 15, 63, 0.6) !important;
+}
+
+.glass-card .table thead th {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    font-weight: 600;
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    vertical-align: middle;
+}
+
+.glass-card .table tbody td {
+    color: rgba(255, 255, 255, 0.9) !important;
+    background: transparent !important;
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+}
+
+.glass-card .table tbody tr {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.glass-card .table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.glass-card .table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Table action buttons */
+.glass-card .table .neon-button {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+}
+
+/* Responsive table */
+.table-responsive {
+    border-radius: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Custom scrollbar for webkit browsers */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Utility classes */
+.gap-2 {
+    gap: 0.5rem !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .glass-card .table thead th,
+    .glass-card .table tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .neon-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
